@@ -27,7 +27,7 @@ def get_df(
     path_to_data:str,
     sep: str="\t",
     column_names:list=["id", "label", "text"],
-    encoding="utf-8") -> pd.pd.DataFrame:
+    encoding="utf-8") -> pd.DataFrame:
     df = pd.read_csv(
         path_to_data,
         delimiter=sep,

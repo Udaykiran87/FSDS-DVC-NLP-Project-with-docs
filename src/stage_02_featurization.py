@@ -4,7 +4,7 @@ import numpy as np
 import shutil
 from tqdm import tqdm
 import logging
-from src.utils import read_yaml, create_directories, get_df, save_matrix
+from src.utils import read_yaml, create_directories, get_df
 import random
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 
@@ -55,13 +55,13 @@ def main(config_path, params_path):
     tfidf.fit(train_words_binary_matrix)
     train_words_tfidf_matrix = tfidf.transform(train_words_binary_matrix)
     # call a function to save this matrix
-    save_matrix(df=df_train, matrix=train_words_tfidf_matrix)
+    # save_matrix(df=df_train, matrix=train_words_tfidf_matrix)
 
     # for test data
     df_test = get_df(test_data_path)
     test_words = np.array(df_train.text.str.lower().values.astype("U"))
-    test_words_binary_matrix = bag_of_words.transform(test_words)
-    train_words_binary_matrix = tfidf.transform(test_words_binary_matrix)    
+    test_words_tfidf_matrix = bag_of_words.transform(test_words)
+    train_words_binary_matrix = tfidf.transform(test_words_tfidf_matrix)    
 
 
 

@@ -1,0 +1,157 @@
+[2022-06-19 19:56:26,212: INFO: stage_02_featurization]: 
+********************
+[2022-06-19 19:56:26,212: INFO: stage_02_featurization]: >>>>> stage Featurization started <<<<<
+[2022-06-19 19:56:26,214: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-19 19:56:26,214: ERROR: stage_02_featurization]: while scanning a simple key
+  in "params.yaml", line 3, column 1
+could not find expected ':'
+  in "params.yaml", line 4, column 1
+Traceback (most recent call last):
+  File "src/stage_02_featurization.py", line 78, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_02_featurization.py", line 25, in main
+    params = read_yaml(params_path)
+  File "c:\ineuron\nlp\projects\project-with-docs\fsds-dvc-nlp-project-with-docs\src\utils\common.py", line 10, in read_yaml
+    content = yaml.safe_load(yaml_file)
+  File "C:\INEURON\NLP\Projects\Project-with-docs\FSDS-DVC-NLP-Project-with-docs\env\lib\site-packages\yaml\__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "C:\INEURON\NLP\Projects\Project-with-docs\FSDS-DVC-NLP-Project-with-docs\env\lib\site-packages\yaml\__init__.py", line 81, in load
+    return loader.get_single_data()
+  File "C:\INEURON\NLP\Projects\Project-with-docs\FSDS-DVC-NLP-Project-with-docs\env\lib\site-packages\yaml\constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "C:\INEURON\NLP\Projects\Project-with-docs\FSDS-DVC-NLP-Project-with-docs\env\lib\site-packages\yaml\composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "C:\INEURON\NLP\Projects\Project-with-docs\FSDS-DVC-NLP-Project-with-docs\env\lib\site-packages\yaml\composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "C:\INEURON\NLP\Projects\Project-with-docs\FSDS-DVC-NLP-Project-with-docs\env\lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "C:\INEURON\NLP\Projects\Project-with-docs\FSDS-DVC-NLP-Project-with-docs\env\lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "C:\INEURON\NLP\Projects\Project-with-docs\FSDS-DVC-NLP-Project-with-docs\env\lib\site-packages\yaml\composer.py", line 64, in compose_node
+    if self.check_event(AliasEvent):
+  File "C:\INEURON\NLP\Projects\Project-with-docs\FSDS-DVC-NLP-Project-with-docs\env\lib\site-packages\yaml\parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "C:\INEURON\NLP\Projects\Project-with-docs\FSDS-DVC-NLP-Project-with-docs\env\lib\site-packages\yaml\parser.py", line 449, in parse_block_mapping_value
+    if not self.check_token(KeyToken, ValueToken, BlockEndToken):
+  File "C:\INEURON\NLP\Projects\Project-with-docs\FSDS-DVC-NLP-Project-with-docs\env\lib\site-packages\yaml\scanner.py", line 115, in check_token
+    while self.need_more_tokens():
+  File "C:\INEURON\NLP\Projects\Project-with-docs\FSDS-DVC-NLP-Project-with-docs\env\lib\site-packages\yaml\scanner.py", line 152, in need_more_tokens
+    self.stale_possible_simple_keys()
+  File "C:\INEURON\NLP\Projects\Project-with-docs\FSDS-DVC-NLP-Project-with-docs\env\lib\site-packages\yaml\scanner.py", line 291, in stale_possible_simple_keys
+    raise ScannerError("while scanning a simple key", key.mark,
+yaml.scanner.ScannerError: while scanning a simple key
+  in "params.yaml", line 3, column 1
+could not find expected ':'
+  in "params.yaml", line 4, column 1
+[2022-06-19 19:57:01,105: INFO: stage_02_featurization]: 
+********************
+[2022-06-19 19:57:01,106: INFO: stage_02_featurization]: >>>>> stage Featurization started <<<<<
+[2022-06-19 19:57:01,108: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-19 19:57:01,108: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-19 19:57:01,108: ERROR: stage_02_featurization]: 'TRAIN_DATA'
+Traceback (most recent call last):
+  File "src/stage_02_featurization.py", line 78, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_02_featurization.py", line 29, in main
+    train_data_path = os.path.join(prepare_data_dir_path,artifacts["TRAIN_DATA"])
+KeyError: 'TRAIN_DATA'
+[2022-06-19 20:00:12,521: INFO: stage_02_featurization]: 
+********************
+[2022-06-19 20:00:12,521: INFO: stage_02_featurization]: >>>>> stage Featurization started <<<<<
+[2022-06-19 20:00:12,523: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-19 20:00:12,523: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-19 20:00:12,524: INFO: common]: created directory at: artifacts\features
+[2022-06-19 20:00:12,524: ERROR: stage_02_featurization]: 'max_features'
+Traceback (most recent call last):
+  File "src/stage_02_featurization.py", line 78, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_02_featurization.py", line 38, in main
+    max_features = params["featurize"]["max_features"]
+KeyError: 'max_features'
+[2022-06-19 20:00:53,542: INFO: stage_02_featurization]: 
+********************
+[2022-06-19 20:00:53,542: INFO: stage_02_featurization]: >>>>> stage Featurization started <<<<<
+[2022-06-19 20:00:53,544: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-19 20:00:53,544: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-19 20:00:53,545: INFO: common]: created directory at: artifacts\features
+[2022-06-19 20:00:53,546: ERROR: stage_02_featurization]: [Errno 2] No such file or directory: 'artifacts\\prepared\\train.tsv'
+Traceback (most recent call last):
+  File "src/stage_02_featurization.py", line 78, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_02_featurization.py", line 42, in main
+    df_train = get_df(train_data_path)
+  File "c:\ineuron\nlp\projects\project-with-docs\fsds-dvc-nlp-project-with-docs\src\utils\common.py", line 31, in get_df
+    df = pd.read_csv(
+  File "C:\INEURON\NLP\Projects\Project-with-docs\FSDS-DVC-NLP-Project-with-docs\env\lib\site-packages\pandas\util\_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "C:\INEURON\NLP\Projects\Project-with-docs\FSDS-DVC-NLP-Project-with-docs\env\lib\site-packages\pandas\io\parsers\readers.py", line 680, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\INEURON\NLP\Projects\Project-with-docs\FSDS-DVC-NLP-Project-with-docs\env\lib\site-packages\pandas\io\parsers\readers.py", line 575, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\INEURON\NLP\Projects\Project-with-docs\FSDS-DVC-NLP-Project-with-docs\env\lib\site-packages\pandas\io\parsers\readers.py", line 933, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "C:\INEURON\NLP\Projects\Project-with-docs\FSDS-DVC-NLP-Project-with-docs\env\lib\site-packages\pandas\io\parsers\readers.py", line 1217, in _make_engine
+    self.handles = get_handle(  # type: ignore[call-overload]
+  File "C:\INEURON\NLP\Projects\Project-with-docs\FSDS-DVC-NLP-Project-with-docs\env\lib\site-packages\pandas\io\common.py", line 789, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts\\prepared\\train.tsv'
+[2022-06-19 20:01:29,238: INFO: stage_01_prepare_data]: 
+********************
+[2022-06-19 20:01:29,238: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data started <<<<<
+[2022-06-19 20:01:29,239: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-19 20:01:29,240: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-19 20:01:29,240: INFO: common]: created directory at: artifacts\prepared
+[2022-06-19 20:01:30,676: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data completed!<<<<<
+
+[2022-06-19 20:01:39,853: INFO: stage_02_featurization]: 
+********************
+[2022-06-19 20:01:39,853: INFO: stage_02_featurization]: >>>>> stage Featurization started <<<<<
+[2022-06-19 20:01:39,855: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-19 20:01:39,856: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-19 20:01:39,856: INFO: common]: created directory at: artifacts\features
+[2022-06-19 20:01:39,992: INFO: common]: The input data frame artifacts\prepared\train.tsv of size (17536, 3) is read.
+[2022-06-19 20:01:47,542: ERROR: stage_02_featurization]: save_matrix() missing 1 required positional argument: 'out_path'
+Traceback (most recent call last):
+  File "src/stage_02_featurization.py", line 78, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_02_featurization.py", line 58, in main
+    save_matrix(df=df_train, matrix=train_words_tfidf_matrix)
+TypeError: save_matrix() missing 1 required positional argument: 'out_path'
+[2022-06-19 20:02:51,196: INFO: stage_02_featurization]: 
+********************
+[2022-06-19 20:02:51,197: INFO: stage_02_featurization]: >>>>> stage Featurization started <<<<<
+[2022-06-19 20:02:51,198: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-19 20:02:51,199: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-19 20:02:51,199: INFO: common]: created directory at: artifacts\features
+[2022-06-19 20:02:51,334: INFO: common]: The input data frame artifacts\prepared\train.tsv of size (17536, 3) is read.
+[2022-06-19 20:02:59,279: ERROR: stage_02_featurization]: save_matrix() missing 1 required positional argument: 'out_path'
+Traceback (most recent call last):
+  File "src/stage_02_featurization.py", line 78, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_02_featurization.py", line 58, in main
+    save_matrix(df=df_train, matrix=train_words_tfidf_matrix)
+TypeError: save_matrix() missing 1 required positional argument: 'out_path'
+[2022-06-19 20:04:53,977: INFO: stage_02_featurization]: 
+********************
+[2022-06-19 20:04:53,977: INFO: stage_02_featurization]: >>>>> stage Featurization started <<<<<
+[2022-06-19 20:04:53,978: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-19 20:04:53,979: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-19 20:04:53,979: INFO: common]: created directory at: artifacts\features
+[2022-06-19 20:04:54,114: INFO: common]: The input data frame artifacts\prepared\train.tsv of size (17536, 3) is read.
+[2022-06-19 20:05:01,727: ERROR: stage_02_featurization]: name 'save_matrix' is not defined
+Traceback (most recent call last):
+  File "src/stage_02_featurization.py", line 78, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_02_featurization.py", line 58, in main
+    save_matrix(df=df_train, matrix=train_words_tfidf_matrix)
+NameError: name 'save_matrix' is not defined
+[2022-06-19 20:05:30,001: INFO: stage_02_featurization]: 
+********************
+[2022-06-19 20:05:30,001: INFO: stage_02_featurization]: >>>>> stage Featurization started <<<<<
+[2022-06-19 20:05:30,003: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-19 20:05:30,004: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-19 20:05:30,004: INFO: common]: created directory at: artifacts\features
+[2022-06-19 20:05:30,136: INFO: common]: The input data frame artifacts\prepared\train.tsv of size (17536, 3) is read.
+[2022-06-19 20:05:37,627: INFO: common]: The input data frame artifacts\prepared\test.tsv of size (7464, 3) is read.
+[2022-06-19 20:05:41,097: INFO: stage_02_featurization]: >>>>> stage Featurization completed!<<<<<
+
