@@ -8,3 +8,12 @@ stages:
     - data/data.xml
     outs:
     - artifacts/prepared
+
+  featurization:
+    cmd: python src/stage_02_featurization.py
+    deps:
+    - src/stage_02_featurization.py
+    - src/utils
+    - artifacts/prepared
+    outs:
+    - artifacts/features    
