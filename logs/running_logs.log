@@ -10,3 +10,11 @@
 [2022-06-20 16:33:07,577: INFO: data_mgmt]: The output matrix saved at artifacts\features\test.pkl of shape: (7464, 2502)
 [2022-06-20 16:33:07,762: INFO: stage_02_featurization]: >>>>> stage Featurization completed!<<<<<
 
+[2022-06-20 18:56:42,353: INFO: stage_01_prepare_data]: 
+********************
+[2022-06-20 18:56:42,353: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data started <<<<<
+[2022-06-20 18:56:42,353: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-20 18:56:42,353: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-20 18:56:42,353: INFO: common]: created directory at: artifacts\prepared
+[2022-06-20 18:56:44,202: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data completed!<<<<<
+
