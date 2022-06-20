@@ -5,6 +5,8 @@ import random
 import xml.etree.ElementTree as ET
 import re
 import numpy as np
+import scipy.sparse as sparse
+import joblib
 
 def process_posts(fd_in, fd_out_train, fd_out_test, target_tag, split):
     line_num = 1
@@ -27,6 +29,5 @@ def process_posts(fd_in, fd_out_train, fd_out_test, target_tag, split):
             msg = f"skipping the broken line {line_num}: {e}\n"
             logging.exception(msg)
 
-# def save_matrix(df, matrix, out_path):
-#     # id_matrix = df.pid.astype(np.int64)           
-#     pass
+def save_matrix(df, text_matrix, out_path):
+    id_matrix = df.pid.astype(np.int64)           
