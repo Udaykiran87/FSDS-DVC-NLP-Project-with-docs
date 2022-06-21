@@ -1,148 +1,44 @@
-[2022-06-20 16:32:55,802: INFO: stage_02_featurization]: 
+[2022-06-21 20:01:36,618: INFO: stage_01_prepare_data]: 
 ********************
-[2022-06-20 16:32:55,803: INFO: stage_02_featurization]: >>>>> stage Featurization started <<<<<
-[2022-06-20 16:32:55,805: INFO: common]: yaml file: configs/config.yaml loaded successfully
-[2022-06-20 16:32:55,806: INFO: common]: yaml file: params.yaml loaded successfully
-[2022-06-20 16:32:55,806: INFO: common]: created directory at: artifacts\features
-[2022-06-20 16:32:55,988: INFO: common]: The input data frame artifacts\prepared\train.tsv of size (17536, 3) is read.
-[2022-06-20 16:33:05,764: INFO: data_mgmt]: The output matrix saved at artifacts\features\train.pkl of shape: (17536, 2502)
-[2022-06-20 16:33:05,853: INFO: common]: The input data frame artifacts\prepared\test.tsv of size (7464, 3) is read.
-[2022-06-20 16:33:07,577: INFO: data_mgmt]: The output matrix saved at artifacts\features\test.pkl of shape: (7464, 2502)
-[2022-06-20 16:33:07,762: INFO: stage_02_featurization]: >>>>> stage Featurization completed!<<<<<
+[2022-06-21 20:01:36,618: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data started <<<<<
+[2022-06-21 20:01:36,621: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-21 20:01:36,621: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-21 20:01:36,621: INFO: common]: created directory at: artifacts\prepared
+[2022-06-21 20:01:38,598: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data completed!<<<<<
 
-[2022-06-20 18:56:42,353: INFO: stage_01_prepare_data]: 
+[2022-06-21 20:01:40,317: INFO: stage_02_featurization]: 
 ********************
-[2022-06-20 18:56:42,353: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data started <<<<<
-[2022-06-20 18:56:42,353: INFO: common]: yaml file: configs/config.yaml loaded successfully
-[2022-06-20 18:56:42,353: INFO: common]: yaml file: params.yaml loaded successfully
-[2022-06-20 18:56:42,353: INFO: common]: created directory at: artifacts\prepared
-[2022-06-20 18:56:44,202: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data completed!<<<<<
+[2022-06-21 20:01:40,317: INFO: stage_02_featurization]: >>>>> stage Featurization started <<<<<
+[2022-06-21 20:01:40,317: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-21 20:01:40,317: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-21 20:01:40,317: INFO: common]: created directory at: artifacts\features
+[2022-06-21 20:01:40,482: INFO: common]: The input data frame artifacts\prepared\train.tsv of size (17536, 3) is read.
+[2022-06-21 20:01:50,087: INFO: data_mgmt]: The output matrix saved at artifacts\features\train.pkl of shape: (17536, 2502)
+[2022-06-21 20:01:50,165: INFO: common]: The input data frame artifacts\prepared\test.tsv of size (7464, 3) is read.
+[2022-06-21 20:01:51,898: INFO: data_mgmt]: The output matrix saved at artifacts\features\test.pkl of shape: (7464, 2502)
+[2022-06-21 20:01:52,182: INFO: stage_02_featurization]: >>>>> stage Featurization completed!<<<<<
 
-[2022-06-20 19:07:30,677: INFO: stage_02_featurization]: 
+[2022-06-21 20:01:54,311: INFO: stage_03_train]: 
 ********************
-[2022-06-20 19:07:30,677: INFO: stage_02_featurization]: >>>>> stage Featurization started <<<<<
-[2022-06-20 19:07:30,686: INFO: common]: yaml file: configs/config.yaml loaded successfully
-[2022-06-20 19:07:30,686: INFO: common]: yaml file: params.yaml loaded successfully
-[2022-06-20 19:07:30,686: INFO: common]: created directory at: artifacts\features
-[2022-06-20 19:07:30,881: INFO: common]: The input data frame artifacts\prepared\train.tsv of size (17536, 3) is read.
-[2022-06-20 19:07:40,835: INFO: data_mgmt]: The output matrix saved at artifacts\features\train.pkl of shape: (17536, 2502)
-[2022-06-20 19:07:40,919: INFO: common]: The input data frame artifacts\prepared\test.tsv of size (7464, 3) is read.
-[2022-06-20 19:07:42,652: INFO: data_mgmt]: The output matrix saved at artifacts\features\test.pkl of shape: (7464, 2502)
-[2022-06-20 19:07:42,926: INFO: stage_02_featurization]: >>>>> stage Featurization completed!<<<<<
+[2022-06-21 20:01:54,311: INFO: stage_03_train]: >>>>> stage Training started <<<<<
+[2022-06-21 20:01:54,311: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-21 20:01:54,311: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-21 20:01:54,311: INFO: common]: created directory at: artifacts\model
+[2022-06-21 20:01:54,333: INFO: stage_03_train]: input matrix size: (17536, 2502)
+[2022-06-21 20:01:54,333: INFO: stage_03_train]: X matrix size: (17536, 2500)
+[2022-06-21 20:01:54,333: INFO: stage_03_train]: Y matrix size or labels: (17536,)
+[2022-06-21 20:01:56,778: INFO: stage_03_train]: saved our model at: artifacts\model\model.pkl
+[2022-06-21 20:01:56,778: INFO: stage_03_train]: >>>>> stage Training completed!<<<<<
 
-[2022-06-21 15:13:04,005: INFO: stage_03_train]: 
+[2022-06-21 20:02:01,215: INFO: stage_04_evaluate]: 
 ********************
-[2022-06-21 15:13:04,005: INFO: stage_03_train]: >>>>> stage Training started <<<<<
-[2022-06-21 15:13:04,010: INFO: common]: yaml file: configs/config.yaml loaded successfully
-[2022-06-21 15:13:04,012: INFO: common]: yaml file: params.yaml loaded successfully
-[2022-06-21 15:13:04,012: INFO: common]: created directory at: artifacts\model
-[2022-06-21 15:13:04,023: ERROR: stage_03_train]: 'coo_matrix' object is not subscriptable
-Traceback (most recent call last):
-  File "src/stage_03_train.py", line 75, in <module>
-    main(config_path=parsed_args.config, params_path=parsed_args.params)
-  File "src/stage_03_train.py", line 41, in main
-    labels = np.squeeze(matrix[:, 1].toarray())
-TypeError: 'coo_matrix' object is not subscriptable
-[2022-06-21 15:21:06,858: INFO: stage_01_prepare_data]: 
-********************
-[2022-06-21 15:21:06,858: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data started <<<<<
-[2022-06-21 15:21:06,867: INFO: common]: yaml file: configs/config.yaml loaded successfully
-[2022-06-21 15:21:06,868: INFO: common]: yaml file: params.yaml loaded successfully
-[2022-06-21 15:21:06,868: INFO: common]: created directory at: artifacts\prepared
-[2022-06-21 15:21:08,718: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data completed!<<<<<
-
-[2022-06-21 15:21:10,483: INFO: stage_02_featurization]: 
-********************
-[2022-06-21 15:21:10,483: INFO: stage_02_featurization]: >>>>> stage Featurization started <<<<<
-[2022-06-21 15:21:10,483: INFO: common]: yaml file: configs/config.yaml loaded successfully
-[2022-06-21 15:21:10,483: INFO: common]: yaml file: params.yaml loaded successfully
-[2022-06-21 15:21:10,483: INFO: common]: created directory at: artifacts\features
-[2022-06-21 15:21:10,649: INFO: common]: The input data frame artifacts\prepared\train.tsv of size (17536, 3) is read.
-[2022-06-21 15:21:20,533: INFO: data_mgmt]: The output matrix saved at artifacts\features\train.pkl of shape: (17536, 2502)
-[2022-06-21 15:21:20,618: INFO: common]: The input data frame artifacts\prepared\test.tsv of size (7464, 3) is read.
-[2022-06-21 15:21:22,442: INFO: data_mgmt]: The output matrix saved at artifacts\features\test.pkl of shape: (7464, 2502)
-[2022-06-21 15:21:22,743: INFO: stage_02_featurization]: >>>>> stage Featurization completed!<<<<<
-
-[2022-06-21 15:28:26,752: INFO: stage_03_train]: 
-********************
-[2022-06-21 15:28:26,752: INFO: stage_03_train]: >>>>> stage Training started <<<<<
-[2022-06-21 15:28:26,755: INFO: common]: yaml file: configs/config.yaml loaded successfully
-[2022-06-21 15:28:26,759: INFO: common]: yaml file: params.yaml loaded successfully
-[2022-06-21 15:28:26,759: INFO: common]: created directory at: artifacts\model
-[2022-06-21 15:28:26,774: INFO: stage_03_train]: input matrix size: (17536, 2502)
-[2022-06-21 15:28:26,774: INFO: stage_03_train]: X matrix size: (17536, 2500)
-[2022-06-21 15:28:26,774: INFO: stage_03_train]: Y matrix size or labels: (17536,)
-[2022-06-21 15:28:26,774: ERROR: stage_03_train]: __init__() got an unexpected keyword argument 'min_sample_spli'
-Traceback (most recent call last):
-  File "src/stage_03_train.py", line 75, in <module>
-    main(config_path=parsed_args.config, params_path=parsed_args.params)
-  File "src/stage_03_train.py", line 53, in main
-    model = RandomForestClassifier(
-TypeError: __init__() got an unexpected keyword argument 'min_sample_spli'
-[2022-06-21 15:29:43,830: INFO: stage_03_train]: 
-********************
-[2022-06-21 15:29:43,830: INFO: stage_03_train]: >>>>> stage Training started <<<<<
-[2022-06-21 15:29:43,830: INFO: common]: yaml file: configs/config.yaml loaded successfully
-[2022-06-21 15:29:43,830: INFO: common]: yaml file: params.yaml loaded successfully
-[2022-06-21 15:29:43,830: INFO: common]: created directory at: artifacts\model
-[2022-06-21 15:29:43,850: INFO: stage_03_train]: input matrix size: (17536, 2502)
-[2022-06-21 15:29:43,850: INFO: stage_03_train]: X matrix size: (17536, 2500)
-[2022-06-21 15:29:43,850: INFO: stage_03_train]: Y matrix size or labels: (17536,)
-[2022-06-21 15:29:46,345: INFO: stage_03_train]: saved our model at: artifacts\model\model.pkl
-[2022-06-21 15:29:46,345: INFO: stage_03_train]: >>>>> stage Training completed!<<<<<
-
-[2022-06-21 16:09:52,277: INFO: stage_04_evaluate]: 
-********************
-[2022-06-21 16:09:52,277: INFO: stage_04_evaluate]: >>>>> stage Evaluation started <<<<<
-[2022-06-21 16:09:52,282: INFO: common]: yaml file: configs/config.yaml loaded successfully
-[2022-06-21 16:09:52,282: INFO: common]: yaml file: params.yaml loaded successfully
-[2022-06-21 16:09:52,574: INFO: stage_04_evaluate]: >>>>> stage Evaluation completed!<<<<<
-
-[2022-06-21 16:10:35,177: INFO: stage_04_evaluate]: 
-********************
-[2022-06-21 16:10:35,177: INFO: stage_04_evaluate]: >>>>> stage Evaluation started <<<<<
-[2022-06-21 16:10:35,179: INFO: common]: yaml file: configs/config.yaml loaded successfully
-[2022-06-21 16:10:35,180: INFO: common]: yaml file: params.yaml loaded successfully
-[2022-06-21 16:10:35,467: INFO: common]: json file saved at: scores.json
-[2022-06-21 16:10:35,467: INFO: stage_04_evaluate]: >>>>> stage Evaluation completed!<<<<<
-
-[2022-06-21 16:33:58,978: INFO: stage_04_evaluate]: 
-********************
-[2022-06-21 16:33:58,978: INFO: stage_04_evaluate]: >>>>> stage Evaluation started <<<<<
-[2022-06-21 16:33:58,978: INFO: common]: yaml file: configs/config.yaml loaded successfully
-[2022-06-21 16:33:58,988: INFO: common]: yaml file: params.yaml loaded successfully
-[2022-06-21 16:33:59,325: INFO: common]: json file saved at: scores.json
-[2022-06-21 16:33:59,327: INFO: common]: json file saved at: prc.json
-[2022-06-21 16:33:59,328: INFO: common]: json file saved at: prc.json
-[2022-06-21 16:33:59,329: INFO: stage_04_evaluate]: >>>>> stage Evaluation completed!<<<<<
-
-[2022-06-21 16:35:02,959: INFO: stage_04_evaluate]: 
-********************
-[2022-06-21 16:35:02,959: INFO: stage_04_evaluate]: >>>>> stage Evaluation started <<<<<
-[2022-06-21 16:35:02,959: INFO: common]: yaml file: configs/config.yaml loaded successfully
-[2022-06-21 16:35:02,959: INFO: common]: yaml file: params.yaml loaded successfully
-[2022-06-21 16:35:03,228: INFO: common]: json file saved at: scores.json
-[2022-06-21 16:35:03,228: INFO: common]: json file saved at: prc.json
-[2022-06-21 16:35:03,228: INFO: common]: json file saved at: prc.json
-[2022-06-21 16:35:03,228: INFO: stage_04_evaluate]: >>>>> stage Evaluation completed!<<<<<
-
-[2022-06-21 16:36:28,590: INFO: stage_04_evaluate]: 
-********************
-[2022-06-21 16:36:28,590: INFO: stage_04_evaluate]: >>>>> stage Evaluation started <<<<<
-[2022-06-21 16:36:28,590: INFO: common]: yaml file: configs/config.yaml loaded successfully
-[2022-06-21 16:36:28,590: INFO: common]: yaml file: params.yaml loaded successfully
-[2022-06-21 16:36:28,852: INFO: common]: json file saved at: scores.json
-[2022-06-21 16:36:28,853: INFO: common]: json file saved at: prc.json
-[2022-06-21 16:36:28,854: INFO: common]: json file saved at: roc.json
-[2022-06-21 16:36:28,855: INFO: stage_04_evaluate]: >>>>> stage Evaluation completed!<<<<<
-
-[2022-06-21 16:36:55,343: INFO: stage_04_evaluate]: 
-********************
-[2022-06-21 16:36:55,343: INFO: stage_04_evaluate]: >>>>> stage Evaluation started <<<<<
-[2022-06-21 16:36:55,343: INFO: common]: yaml file: configs/config.yaml loaded successfully
-[2022-06-21 16:36:55,343: INFO: common]: yaml file: params.yaml loaded successfully
-[2022-06-21 16:36:55,608: INFO: common]: json file saved at: scores.json
-[2022-06-21 16:36:55,608: INFO: common]: json file saved at: prc.json
-[2022-06-21 16:36:55,608: INFO: common]: json file saved at: roc.json
-[2022-06-21 16:36:55,608: INFO: stage_04_evaluate]: >>>>> stage Evaluation completed!<<<<<
+[2022-06-21 20:02:01,215: INFO: stage_04_evaluate]: >>>>> stage Evaluation started <<<<<
+[2022-06-21 20:02:01,231: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-21 20:02:01,231: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-21 20:02:01,488: INFO: common]: json file saved at: scores.json
+[2022-06-21 20:02:01,488: INFO: stage_04_evaluate]: no. of prc points: 914
+[2022-06-21 20:02:01,504: INFO: common]: json file saved at: prc.json
+[2022-06-21 20:02:01,504: INFO: stage_04_evaluate]: no. of roc points: 0
+[2022-06-21 20:02:01,504: INFO: common]: json file saved at: roc.json
+[2022-06-21 20:02:01,504: INFO: stage_04_evaluate]: >>>>> stage Evaluation completed!<<<<<
 

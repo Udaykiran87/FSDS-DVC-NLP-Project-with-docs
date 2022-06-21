@@ -40,14 +40,15 @@ def main(config_path, params_path):
     labels = np.squeeze(matrix[:,1].toarray())
     X = matrix[:, 2:]
 
-    predictions = model.predict(X)
+    predictions_probabilities  = model.predict_proba(X)
+    pred = predictions_probabilities[:, 1]
 
     PRC_json_path  = config["plots"]["PRC"]
     ROC_json_path  = config["plots"]["ROC"]
     scores_json_path = config["metrics"]["SCORES"]
 
-    avg_prec = metrics.average_precision_score(labels, predictions)
-    roc_auc = metrics.roc_auc_score(labels, predictions)
+    avg_prec = metrics.average_precision_score(labels, pred)
+    roc_auc = metrics.roc_auc_score(labels, pred)
 
     scores = {
         "avg_prec": avg_prec,
@@ -56,7 +57,7 @@ def main(config_path, params_path):
 
     save_json(scores_json_path, scores)
    
-    precision, recall, prc_threshold  = metrics.precision_recall_curve(labels, predictions, )
+    precision, recall, prc_threshold  = metrics.precision_recall_curve(labels, pred)
 
     nth_point = math.ceil(len(prc_threshold)/1000)
     prc_points = list(zip(precision, recall, prc_threshold))[::nth_point]
@@ -68,18 +69,19 @@ def main(config_path, params_path):
             for p, r, t in prc_points
         ]
     }
-
+    logging.info(f"no. of prc points: {len(prc_points)}")
     save_json(PRC_json_path, prc_data)
 
-    fpr, tpr, roc_threshold = metrics.roc_curve(labels, predictions)
-
+    fpr, tpr, roc_threshold = metrics.roc_curve(labels, pred)
+    roc_points = zip(fpr, tpr, roc_threshold)
+    
     roc_data = {
         "roc": [
             {"fpr": fp, "tpr": tp, "threshold": t} 
-            for fp, tp, t in zip(fpr, tpr, roc_threshold)
+            for fp, tp, t in roc_points
         ]
     }
-
+    logging.info(f"no. of roc points: {len(list(roc_points))}")
     save_json(ROC_json_path, roc_data)    
 
 
