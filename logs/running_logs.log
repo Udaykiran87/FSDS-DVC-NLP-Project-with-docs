@@ -30,3 +30,36 @@
 [2022-06-20 19:07:42,652: INFO: data_mgmt]: The output matrix saved at artifacts\features\test.pkl of shape: (7464, 2502)
 [2022-06-20 19:07:42,926: INFO: stage_02_featurization]: >>>>> stage Featurization completed!<<<<<
 
+[2022-06-21 15:13:04,005: INFO: stage_03_train]: 
+********************
+[2022-06-21 15:13:04,005: INFO: stage_03_train]: >>>>> stage Training started <<<<<
+[2022-06-21 15:13:04,010: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-21 15:13:04,012: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-21 15:13:04,012: INFO: common]: created directory at: artifacts\model
+[2022-06-21 15:13:04,023: ERROR: stage_03_train]: 'coo_matrix' object is not subscriptable
+Traceback (most recent call last):
+  File "src/stage_03_train.py", line 75, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_03_train.py", line 41, in main
+    labels = np.squeeze(matrix[:, 1].toarray())
+TypeError: 'coo_matrix' object is not subscriptable
+[2022-06-21 15:21:06,858: INFO: stage_01_prepare_data]: 
+********************
+[2022-06-21 15:21:06,858: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data started <<<<<
+[2022-06-21 15:21:06,867: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-21 15:21:06,868: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-21 15:21:06,868: INFO: common]: created directory at: artifacts\prepared
+[2022-06-21 15:21:08,718: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data completed!<<<<<
+
+[2022-06-21 15:21:10,483: INFO: stage_02_featurization]: 
+********************
+[2022-06-21 15:21:10,483: INFO: stage_02_featurization]: >>>>> stage Featurization started <<<<<
+[2022-06-21 15:21:10,483: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-21 15:21:10,483: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-21 15:21:10,483: INFO: common]: created directory at: artifacts\features
+[2022-06-21 15:21:10,649: INFO: common]: The input data frame artifacts\prepared\train.tsv of size (17536, 3) is read.
+[2022-06-21 15:21:20,533: INFO: data_mgmt]: The output matrix saved at artifacts\features\train.pkl of shape: (17536, 2502)
+[2022-06-21 15:21:20,618: INFO: common]: The input data frame artifacts\prepared\test.tsv of size (7464, 3) is read.
+[2022-06-21 15:21:22,442: INFO: data_mgmt]: The output matrix saved at artifacts\features\test.pkl of shape: (7464, 2502)
+[2022-06-21 15:21:22,743: INFO: stage_02_featurization]: >>>>> stage Featurization completed!<<<<<
+
