@@ -1,5 +1,5 @@
 # # uncomment below lines to use CML
-name: DSDS-DVC-NLP-project
+name: FSDS-DVC-NLP-project
 
 on: [push]
 
