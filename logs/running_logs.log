@@ -63,3 +63,31 @@ TypeError: 'coo_matrix' object is not subscriptable
 [2022-06-21 15:21:22,442: INFO: data_mgmt]: The output matrix saved at artifacts\features\test.pkl of shape: (7464, 2502)
 [2022-06-21 15:21:22,743: INFO: stage_02_featurization]: >>>>> stage Featurization completed!<<<<<
 
+[2022-06-21 15:28:26,752: INFO: stage_03_train]: 
+********************
+[2022-06-21 15:28:26,752: INFO: stage_03_train]: >>>>> stage Training started <<<<<
+[2022-06-21 15:28:26,755: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-21 15:28:26,759: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-21 15:28:26,759: INFO: common]: created directory at: artifacts\model
+[2022-06-21 15:28:26,774: INFO: stage_03_train]: input matrix size: (17536, 2502)
+[2022-06-21 15:28:26,774: INFO: stage_03_train]: X matrix size: (17536, 2500)
+[2022-06-21 15:28:26,774: INFO: stage_03_train]: Y matrix size or labels: (17536,)
+[2022-06-21 15:28:26,774: ERROR: stage_03_train]: __init__() got an unexpected keyword argument 'min_sample_spli'
+Traceback (most recent call last):
+  File "src/stage_03_train.py", line 75, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_03_train.py", line 53, in main
+    model = RandomForestClassifier(
+TypeError: __init__() got an unexpected keyword argument 'min_sample_spli'
+[2022-06-21 15:29:43,830: INFO: stage_03_train]: 
+********************
+[2022-06-21 15:29:43,830: INFO: stage_03_train]: >>>>> stage Training started <<<<<
+[2022-06-21 15:29:43,830: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-21 15:29:43,830: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-21 15:29:43,830: INFO: common]: created directory at: artifacts\model
+[2022-06-21 15:29:43,850: INFO: stage_03_train]: input matrix size: (17536, 2502)
+[2022-06-21 15:29:43,850: INFO: stage_03_train]: X matrix size: (17536, 2500)
+[2022-06-21 15:29:43,850: INFO: stage_03_train]: Y matrix size or labels: (17536,)
+[2022-06-21 15:29:46,345: INFO: stage_03_train]: saved our model at: artifacts\model\model.pkl
+[2022-06-21 15:29:46,345: INFO: stage_03_train]: >>>>> stage Training completed!<<<<<
+

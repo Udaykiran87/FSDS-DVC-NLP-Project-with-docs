@@ -52,7 +52,7 @@ def main(config_path, params_path):
 
     model = RandomForestClassifier(
         n_estimators=n_est,
-        min_sample_spli = min_split,
+        min_samples_split=min_split,
         n_jobs=n_jobs,
         random_state=seed
     )
